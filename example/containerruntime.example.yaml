@@ -1,0 +1,8 @@
+apiVersion: alexpetrescu.io/v1
+kind: ContainerRuntime
+metadata:
+  name: nginx-container
+spec:
+  image: nginx:1.14.2
+  containerPort: 80
+  replicas: 1

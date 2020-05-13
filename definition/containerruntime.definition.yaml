@@ -34,9 +34,12 @@ spec:
         spec:
           type: object
           properties:
+              # image for the pods that our deployment is creating
               image:
                 type: string
+              # the port that our pods are exposing; this pis the port that our service is exposing internally (port)
               containerPort:
                 type: number
+              # replication factor for our deployment
               replicas:
                 type: number

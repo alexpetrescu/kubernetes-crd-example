@@ -258,6 +258,7 @@ export class ContainerRuntimeService {
 
   private isServiceSynced(obj: any, service: V1Service) {
     if (
+      service?.spec?.type !== "NodePort" ||
       service?.spec?.ports?.length === 0 ||
       service?.spec?.ports.findIndex(
         f =>

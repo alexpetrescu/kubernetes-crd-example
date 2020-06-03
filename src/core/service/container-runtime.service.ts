@@ -113,11 +113,6 @@ export class ContainerRuntimeService {
     return ctr?.body;
   }
 
-  private async add(obj: any): Promise<void> {
-    await this.addDeployment(obj);
-    await this.addService(obj);
-  }
-
   private async delete(obj: any): Promise<any> {
     await this.deleteDeployment(obj);
     await this.deleteService(obj);

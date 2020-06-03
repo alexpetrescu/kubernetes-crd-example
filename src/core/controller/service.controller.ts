@@ -57,7 +57,7 @@ export class ServiceController implements OnApplicationShutdown {
         await this.queueService.enqueueContainerRuntime(ctr);
       } else {
         this.logger.log(
-          `${LogConstant.DoingNothing} for service/${obj.metadata?.name}}`,
+          `${LogConstant.DoingNothing} for service/${obj.metadata?.name}.`,
           obj.correlationId,
         );
       }
